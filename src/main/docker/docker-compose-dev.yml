@@ -1,0 +1,12 @@
+version: '2'
+services:
+  const-registry:
+    extends:
+      file: jhipster-registry.yml
+      service: jhipster-registry
+    container_name: const-jhipster-registry
+  const-postgresql:
+    extends:
+      file: postgresql.yml
+      service: postgresql
+    container_name: const-postgresql
