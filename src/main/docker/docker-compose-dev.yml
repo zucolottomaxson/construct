@@ -8,5 +8,15 @@ services:
   const-postgresql:
     extends:
       file: postgresql.yml
-      service: postgresql
+      service: construct-postgresql
     container_name: const-postgresql
+  zookeeper:
+    extends:
+      file: kafka.yml
+      service: zookeeper
+    container_name: zookeeper
+  kafka:
+    extends:
+      file: kafka.yml
+      service: kafka
+    container_name: kafka
